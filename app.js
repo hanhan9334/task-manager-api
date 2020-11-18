@@ -360,9 +360,10 @@ const deleteTasksFromList = (_listId) => {
 
 }
 
-// Create link to Angular build directory
-var distDir = __dirname + "/dist/";
-app.use(express.static(distDir));
+
+app.get('/', (req, res) => {
+    return res.send('Hello');
+});
 
 app.listen(process.env.PORT, () => {
     console.log("Server running");
