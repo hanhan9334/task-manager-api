@@ -27,7 +27,13 @@ app.use(function (req, res, next) {
     );
     res.header(
         "Access-Control-Allow-Credentials", "true"
+    );
+    res.header(
+        "Access-Control-Max-Age", "1728000"
     )
+    if (req.method === "OPTIONS") {
+        return res.status(200).end();
+    };
     next();
 });
 
