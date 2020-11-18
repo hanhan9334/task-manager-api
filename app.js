@@ -26,6 +26,9 @@ app.use(function (req, res, next) {
         'Access-Control-Expose-Headers',
         'x-access-token, x-refresh-token'
     );
+    res.header(
+        "Access-Control-Allow-Credentials", "true"
+    )
     next();
 });
 
