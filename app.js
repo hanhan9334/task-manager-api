@@ -10,7 +10,6 @@ const { List, Task, User } = require('./db/models/index');
 //Link to mongeDB
 require('./db/mongoose');
 
-
 /* middleware */
 
 //Load middleware
